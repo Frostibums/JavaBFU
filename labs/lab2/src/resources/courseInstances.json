@@ -1,0 +1,36 @@
+[
+  {
+    "id": 100001,
+    "courseId": 10123,
+    "startDate": "2022-09-20",
+    "capacity": 30,
+    "instructorId": 9001
+  },
+  {
+    "id": 100002,
+    "courseId": 10123,
+    "startDate": "2023-02-20",
+    "instructorId": 9002
+  },
+  {
+    "id": 100003,
+    "courseId": 10234,
+    "startDate": "2022-10-01",
+    "capacity": 45,
+    "instructorId": 9003
+  },
+  {
+    "id": 100004,
+    "courseId": 10123,
+    "startDate": "2023-04-20",
+    "instructorId": 9002,
+    "capacity": 15
+  },
+  {
+    "id": 100005,
+    "courseId": 19888,
+    "startDate": "2024-07-29",
+    "instructorId": 9002,
+    "capacity": 25
+  }
+]

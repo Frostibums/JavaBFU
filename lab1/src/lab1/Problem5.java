@@ -1,10 +1,10 @@
-package lab1;
+package lab1
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Problem5 {
     public static void main(String[] args){
-        String numbers = "1, 32, 2, 4, 8, 16";
+        String numbers = "4, 2, 8, 32, 16";
         System.out.println(isGeometricProgression(numbers));
     }
 
@@ -12,16 +12,24 @@ public class Problem5 {
         // TODO: implement this method
         String strArr[] = numbers.split(", ");
 
-        int numArr[] = new int[strArr.length];
-        for (int i = 0; i < strArr.length; i++) {
+        int len = strArr.length;
+        if (len < 2)
+            return false;
+
+        int numArr[] = new int[len];
+        for (int i = 0; i < len; i++) {
             numArr[i] = Integer.parseInt(strArr[i]);
         }
         Arrays.sort(numArr);
 
-        for (int i = 0; i < numArr.length-2; i++) {
-            if(numArr[i+1] / numArr[i] != numArr[i+2] / numArr[i+1]){
+        int step = numArr[1]/numArr[0];
+
+        for (int i = 0; i < numArr.length-1; i++) {
+            if(numArr[i] * step != numArr[i+1]){
                 return false;
             }
+            if(numArr[i]==numArr[i+1])
+                return false;
         }
         return true;
     }

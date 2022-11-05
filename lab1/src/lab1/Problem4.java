@@ -13,6 +13,9 @@ public class Problem4 {
 
     public static int[] flattenMatrix(int[][] matrix) {
         // TODO: implement this method
+        if (matrix.length == 0)
+            return new int[0];
+
         int n = matrix.length;
         int m = matrix[0].length;
         int[] res = new int[n*m];

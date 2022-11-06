@@ -22,7 +22,7 @@ public class Problem5 {
         }
         Arrays.sort(numArr);
 
-        int step = numArr[1]/numArr[0];
+        double step = (double) numArr[1]/numArr[0];
 
         for (int i = 0; i < numArr.length-1; i++) {
             if(numArr[i] * step != numArr[i+1]){

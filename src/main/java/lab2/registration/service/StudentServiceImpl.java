@@ -63,7 +63,6 @@ public class StudentServiceImpl extends dataClass implements StudentService {
 
         if (!subscriptions.containsKey(courseId)) {
             var studentList = new ArrayList<Long>();
-            studentList.add(studentId);
             subscriptions.put(courseId, studentList);
         }
 
@@ -87,10 +86,6 @@ public class StudentServiceImpl extends dataClass implements StudentService {
 
         if (!subscriptions.containsKey(courseId) || !subscriptions.get(courseId).contains(studentId))
             return ActionStatus.NOK;
-
-        if (subscriptions.containsKey(courseId) || !subscriptions.get(courseId).contains(studentId))
-            return ActionStatus.NOK;
-
 
         subscriptions.get(courseId).remove(studentId);
         return ActionStatus.OK;
